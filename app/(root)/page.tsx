@@ -52,7 +52,7 @@ const page = async () => {
         <div className="interviews-section">
           {hasPastInterviews ? (
             userInterviews?.map((interview) => (
-              <InterviewCard {...interview} key={interview.id} />
+              <InterviewCard {...interview} userId={user?.id} key={interview.id} />
             ))
           ) : (
             <p>You haven&apos;t taken any interviews yet</p>
@@ -66,7 +66,7 @@ const page = async () => {
         <div className="interviews-section">
           {hasUpcomingInterviews ? (
             latestInterviews?.map((interview) => (
-              <InterviewCard {...interview} key={interview.id} />
+              <InterviewCard {...interview} userId={user?.id} key={interview.id} />
             ))
           ) : (
             <p>There are no new interviews available</p>
